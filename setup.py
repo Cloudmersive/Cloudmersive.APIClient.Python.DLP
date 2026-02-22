@@ -3,7 +3,7 @@
 """
     dlpapi
 
-    Easily and directly scan and detect sensitive data (PII) in input text.  # noqa: E501
+    
 
     OpenAPI spec version: v1
     
@@ -45,6 +45,6 @@ setup(
     include_package_data=True,
     long_description=long_description,
     long_description_content_type='text/markdown'
-    Easily and directly scan and detect sensitive data (PII) in input text.  # noqa: E501
+    
 
 )
