@@ -1,6 +1,6 @@
 ﻿{
-    "projectName": "cloudmersive_phishing_api_client",
-    "packageName": "cloudmersive_phishing_api_client",
-    "packageVersion": "3.0.2",
+    "projectName": "cloudmersive_dlp_api_client",
+    "packageName": "cloudmersive_dlp_api_client",
+    "packageVersion": "3.0.0",
     "packageUrl": "https://cloudmersive.com/phishing-detection-api"
 }
