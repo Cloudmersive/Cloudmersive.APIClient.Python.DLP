@@ -176,7 +176,7 @@ class DlpDocumentDetectionRequest(object):
     def input_file(self):
         """Gets the input_file of this DlpDocumentDetectionRequest.  # noqa: E501
 
-        Document file bytes (PDF, DOCX, PNG, or JPG) to scan for PII and sensitive data.  # noqa: E501
+        Document file bytes (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, or WEBP) to scan for PII and sensitive data.  # noqa: E501
 
         :return: The input_file of this DlpDocumentDetectionRequest.  # noqa: E501
         :rtype: str
@@ -187,7 +187,7 @@ class DlpDocumentDetectionRequest(object):
     def input_file(self, input_file):
         """Sets the input_file of this DlpDocumentDetectionRequest.
 
-        Document file bytes (PDF, DOCX, PNG, or JPG) to scan for PII and sensitive data.  # noqa: E501
+        Document file bytes (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, or WEBP) to scan for PII and sensitive data.  # noqa: E501
 
         :param input_file: The input_file of this DlpDocumentDetectionRequest.  # noqa: E501
         :type: str

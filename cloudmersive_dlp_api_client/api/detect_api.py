@@ -36,7 +36,7 @@ class DetectApi(object):
     def detect_document(self, **kwargs):  # noqa: E501
         """Detect User Data in Document Image  # noqa: E501
 
-        Detects configurable types of user data in a document image (PDF, DOCX, PNG, JPG) using Advanced AI.  # noqa: E501
+        Detects configurable types of user data in a document (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, WEBP) using Advanced AI.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.detect_document(async_req=True)
@@ -58,7 +58,7 @@ class DetectApi(object):
     def detect_document_with_http_info(self, **kwargs):  # noqa: E501
         """Detect User Data in Document Image  # noqa: E501
 
-        Detects configurable types of user data in a document image (PDF, DOCX, PNG, JPG) using Advanced AI.  # noqa: E501
+        Detects configurable types of user data in a document (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, WEBP) using Advanced AI.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.detect_document_with_http_info(async_req=True)
@@ -131,7 +131,7 @@ class DetectApi(object):
     def detect_document_advanced(self, **kwargs):  # noqa: E501
         """Detect User Data in Document Image (Advanced)  # noqa: E501
 
-        Detects 29 configurable types of user data including health-related PHI in a document image (PDF, DOCX, PNG, JPG) using Advanced AI.  # noqa: E501
+        Detects 29 configurable types of user data including health-related PHI in a document (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, WEBP) using Advanced AI.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.detect_document_advanced(async_req=True)
@@ -153,7 +153,7 @@ class DetectApi(object):
     def detect_document_advanced_with_http_info(self, **kwargs):  # noqa: E501
         """Detect User Data in Document Image (Advanced)  # noqa: E501
 
-        Detects 29 configurable types of user data including health-related PHI in a document image (PDF, DOCX, PNG, JPG) using Advanced AI.  # noqa: E501
+        Detects 29 configurable types of user data including health-related PHI in a document (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, WEBP) using Advanced AI.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.detect_document_advanced_with_http_info(async_req=True)

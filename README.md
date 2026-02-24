@@ -4,7 +4,7 @@ Easily and directly scan and detect sensitive data (PII) in input text.
 This Python package provides a native API client for [Cloudmersive DLP API](https://cloudmersive.com/dlp-data-loss-prevention-api)
 
 - API version: v1
-- Package version: 3.0.0
+- Package version: 3.0.1
 - Build package: io.swagger.codegen.languages.PythonClientCodegen
 
 ## Requirements.

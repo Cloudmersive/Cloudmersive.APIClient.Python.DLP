@@ -181,7 +181,7 @@ class DlpDocumentRedactionRequest(object):
     def input_file(self):
         """Gets the input_file of this DlpDocumentRedactionRequest.  # noqa: E501
 
-        Document file bytes (PDF, DOCX, PNG, or JPG) to scan for PII and redact.  # noqa: E501
+        Document file bytes (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, or WEBP) to scan for PII and redact.  # noqa: E501
 
         :return: The input_file of this DlpDocumentRedactionRequest.  # noqa: E501
         :rtype: str
@@ -192,7 +192,7 @@ class DlpDocumentRedactionRequest(object):
     def input_file(self, input_file):
         """Sets the input_file of this DlpDocumentRedactionRequest.
 
-        Document file bytes (PDF, DOCX, PNG, or JPG) to scan for PII and redact.  # noqa: E501
+        Document file bytes (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, or WEBP) to scan for PII and redact.  # noqa: E501
 
         :param input_file: The input_file of this DlpDocumentRedactionRequest.  # noqa: E501
         :type: str

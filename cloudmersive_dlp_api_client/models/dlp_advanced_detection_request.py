@@ -66,7 +66,8 @@ class DlpAdvancedDetectionRequest(object):
         'allow_names_of_relatives': 'bool',
         'allow_health_universal_record_locator': 'bool',
         'allow_biometrics': 'bool',
-        'provide_analysis_rationale': 'bool'
+        'provide_analysis_rationale': 'bool',
+        'custom_policy_id': 'str'
     }
 
     attribute_map = {
@@ -105,10 +106,11 @@ class DlpAdvancedDetectionRequest(object):
         'allow_names_of_relatives': 'AllowNamesOfRelatives',
         'allow_health_universal_record_locator': 'AllowHealthUniversalRecordLocator',
         'allow_biometrics': 'AllowBiometrics',
-        'provide_analysis_rationale': 'ProvideAnalysisRationale'
+        'provide_analysis_rationale': 'ProvideAnalysisRationale',
+        'custom_policy_id': 'CustomPolicyID'
     }
 
-    def __init__(self, input_text=None, allow_email_address=None, allow_phone_number=None, allow_street_address=None, allow_person_name=None, allow_birth_date=None, allow_passport_number=None, allow_drivers_license=None, allow_social_security_number=None, allow_taxpayer_id=None, allow_credit_card_number=None, allow_credit_card_expiration_date=None, allow_credit_card_verification_code=None, allow_bank_account_number=None, allow_iban=None, allow_health_insurance_number=None, allow_bearer_token=None, allow_http_cookie=None, allow_private_keys=None, allow_credentials=None, allow_deep_web_urls=None, allow_source_code=None, allow_ip_address=None, allow_mac_address=None, allow_health_insurance_member_id=None, allow_health_injury_or_disease=None, allow_health_type_of_treatment=None, allow_health_date_and_time_of_treatment=None, allow_health_plan_beneficiary_number=None, allow_health_payments_made_for_treatment=None, allow_vehicle_id=None, allow_device_id=None, allow_names_of_relatives=None, allow_health_universal_record_locator=None, allow_biometrics=None, provide_analysis_rationale=None):  # noqa: E501
+    def __init__(self, input_text=None, allow_email_address=None, allow_phone_number=None, allow_street_address=None, allow_person_name=None, allow_birth_date=None, allow_passport_number=None, allow_drivers_license=None, allow_social_security_number=None, allow_taxpayer_id=None, allow_credit_card_number=None, allow_credit_card_expiration_date=None, allow_credit_card_verification_code=None, allow_bank_account_number=None, allow_iban=None, allow_health_insurance_number=None, allow_bearer_token=None, allow_http_cookie=None, allow_private_keys=None, allow_credentials=None, allow_deep_web_urls=None, allow_source_code=None, allow_ip_address=None, allow_mac_address=None, allow_health_insurance_member_id=None, allow_health_injury_or_disease=None, allow_health_type_of_treatment=None, allow_health_date_and_time_of_treatment=None, allow_health_plan_beneficiary_number=None, allow_health_payments_made_for_treatment=None, allow_vehicle_id=None, allow_device_id=None, allow_names_of_relatives=None, allow_health_universal_record_locator=None, allow_biometrics=None, provide_analysis_rationale=None, custom_policy_id=None):  # noqa: E501
         """DlpAdvancedDetectionRequest - a model defined in Swagger"""  # noqa: E501
 
         self._input_text = None
@@ -147,6 +149,7 @@ class DlpAdvancedDetectionRequest(object):
         self._allow_health_universal_record_locator = None
         self._allow_biometrics = None
         self._provide_analysis_rationale = None
+        self._custom_policy_id = None
         self.discriminator = None
 
         if input_text is not None:
@@ -221,6 +224,8 @@ class DlpAdvancedDetectionRequest(object):
             self.allow_biometrics = allow_biometrics
         if provide_analysis_rationale is not None:
             self.provide_analysis_rationale = provide_analysis_rationale
+        if custom_policy_id is not None:
+            self.custom_policy_id = custom_policy_id
 
     @property
     def input_text(self):
@@ -1049,6 +1054,29 @@ class DlpAdvancedDetectionRequest(object):
         """
 
         self._provide_analysis_rationale = provide_analysis_rationale
+
+    @property
+    def custom_policy_id(self):
+        """Gets the custom_policy_id of this DlpAdvancedDetectionRequest.  # noqa: E501
+
+        Apply a Custom Policy for DLP Enforcement by providing the ID; to create a Custom Policy,  navigate to the Cloudmersive Management Portal and select Custom Policies.  Requires Managed Instance or Private Cloud  # noqa: E501
+
+        :return: The custom_policy_id of this DlpAdvancedDetectionRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._custom_policy_id
+
+    @custom_policy_id.setter
+    def custom_policy_id(self, custom_policy_id):
+        """Sets the custom_policy_id of this DlpAdvancedDetectionRequest.
+
+        Apply a Custom Policy for DLP Enforcement by providing the ID; to create a Custom Policy,  navigate to the Cloudmersive Management Portal and select Custom Policies.  Requires Managed Instance or Private Cloud  # noqa: E501
+
+        :param custom_policy_id: The custom_policy_id of this DlpAdvancedDetectionRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._custom_policy_id = custom_policy_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

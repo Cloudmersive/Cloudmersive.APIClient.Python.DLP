@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**input_file** | **str** | Document file bytes (PDF, DOCX, PNG, or JPG) to scan for PII and sensitive data. | [optional] 
+**input_file** | **str** | Document file bytes (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, or WEBP) to scan for PII and sensitive data. | [optional] 
 **file_name** | **str** | Optional. Name of the input file including extension, used for format detection. If not provided, format is detected from file contents. | [optional] 
 **recognition_mode** | **str** | Optional. Recognition mode for image processing. Options: null (default), \&quot;Fast\&quot;, \&quot;FastPlus\&quot;, \&quot;FastMini\&quot;. | [optional] 
 **allow_email_address** | **bool** | Set to true to allow email addresses in the document and not flag them as PII. | [optional] 

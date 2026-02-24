@@ -40,6 +40,7 @@ Name | Type | Description | Notes
 **allow_biometrics** | **bool** | Set to true to allow biometric data references (e.g. fingerprints, retinal scans, voiceprints) in the input text and not redact them. | [optional] 
 **redaction_mode** | **str** | Redaction mode: \&quot;Delete\&quot; to remove PII entirely, or \&quot;ReplaceWithAsterisk\&quot; to replace PII characters with asterisks (*). | [optional] 
 **provide_analysis_rationale** | **bool** | Set to true to include a natural language rationale explaining why each detection conclusion was formed. | [optional] 
+**custom_policy_id** | **str** | Apply a Custom Policy for DLP Enforcement by providing the ID; to create a Custom Policy,  navigate to the Cloudmersive Management Portal and select Custom Policies.  Requires Managed Instance or Private Cloud | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

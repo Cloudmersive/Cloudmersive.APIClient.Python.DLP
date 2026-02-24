@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**input_file** | **str** | Document file bytes (PDF, DOCX, PNG, or JPG) to scan for PII and sensitive data. | [optional] 
+**input_file** | **str** | Document file bytes (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, or WEBP) to scan for PII and sensitive data. | [optional] 
 **file_name** | **str** | Optional. Name of the input file including extension, used for format detection. If not provided, format is detected from file contents. | [optional] 
 **recognition_mode** | **str** | Optional. Recognition mode for image processing. Options: null (default), \&quot;Fast\&quot;, \&quot;FastPlus\&quot;, \&quot;FastMini\&quot;. | [optional] 
 **allow_email_address** | **bool** | Set to true to allow email addresses in the document and not flag them as PII. | [optional] 
@@ -42,6 +42,7 @@ Name | Type | Description | Notes
 **allow_health_universal_record_locator** | **bool** | Set to true to allow health universal record locators (URLs) in the document and not flag them as PHI. | [optional] 
 **allow_biometrics** | **bool** | Set to true to allow biometric data references (e.g. fingerprints, retinal scans, voiceprints) in the document and not flag them as PII. | [optional] 
 **provide_analysis_rationale** | **bool** | Set to true to include a natural language rationale explaining why each detection conclusion was formed. | [optional] 
+**custom_policy_id** | **str** | Apply a Custom Policy for DLP Enforcement by providing the ID; to create a Custom Policy,  navigate to the Cloudmersive Management Portal and select Custom Policies.  Requires Managed Instance or Private Cloud | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
