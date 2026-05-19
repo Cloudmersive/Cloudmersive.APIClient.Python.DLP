@@ -4,11 +4,121 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**detect_audio**](DetectApi.md#detect_audio) | **POST** /dlp/detect/audio | Detect User Data in Audio File
+[**detect_audio_advanced**](DetectApi.md#detect_audio_advanced) | **POST** /dlp/detect/audio/advanced | Detect User Data in Audio File (Advanced)
 [**detect_document**](DetectApi.md#detect_document) | **POST** /dlp/detect/document | Detect User Data in Document Image
 [**detect_document_advanced**](DetectApi.md#detect_document_advanced) | **POST** /dlp/detect/document/advanced | Detect User Data in Document Image (Advanced)
 [**detect_text**](DetectApi.md#detect_text) | **POST** /dlp/detect/text | Detect User Data in Input Text
 [**detect_text_advanced**](DetectApi.md#detect_text_advanced) | **POST** /dlp/detect/text/advanced | Detect User Data in Input Text (Advanced)
 
+
+# **detect_audio**
+> DlpAudioDetectionResponse detect_audio(body=body)
+
+Detect User Data in Audio File
+
+Transcribes an audio file (WAV, MP3, M4A, FLAC, OGG, WMA) and detects 23 configurable types of user data in the transcript using Advanced AI. Returns the full transcript, token timestamps, and detection results.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import cloudmersive_dlp_api_client
+from cloudmersive_dlp_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Apikey
+configuration = cloudmersive_dlp_api_client.Configuration()
+configuration.api_key['Apikey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Apikey'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = cloudmersive_dlp_api_client.DetectApi(cloudmersive_dlp_api_client.ApiClient(configuration))
+body = cloudmersive_dlp_api_client.DlpAudioDetectionRequest() # DlpAudioDetectionRequest | Input request (optional)
+
+try:
+    # Detect User Data in Audio File
+    api_response = api_instance.detect_audio(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DetectApi->detect_audio: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**DlpAudioDetectionRequest**](DlpAudioDetectionRequest.md)| Input request | [optional] 
+
+### Return type
+
+[**DlpAudioDetectionResponse**](DlpAudioDetectionResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **detect_audio_advanced**
+> DlpAdvancedAudioDetectionResponse detect_audio_advanced(body=body)
+
+Detect User Data in Audio File (Advanced)
+
+Transcribes an audio file (WAV, MP3, M4A, FLAC, OGG, WMA) and detects 29 configurable types of user data including health-related PHI in the transcript using Advanced AI. Returns the full transcript, token timestamps, detection results, and optional rationale.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import cloudmersive_dlp_api_client
+from cloudmersive_dlp_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Apikey
+configuration = cloudmersive_dlp_api_client.Configuration()
+configuration.api_key['Apikey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Apikey'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = cloudmersive_dlp_api_client.DetectApi(cloudmersive_dlp_api_client.ApiClient(configuration))
+body = cloudmersive_dlp_api_client.DlpAdvancedAudioDetectionRequest() # DlpAdvancedAudioDetectionRequest | Input request (optional)
+
+try:
+    # Detect User Data in Audio File (Advanced)
+    api_response = api_instance.detect_audio_advanced(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DetectApi->detect_audio_advanced: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**DlpAdvancedAudioDetectionRequest**](DlpAdvancedAudioDetectionRequest.md)| Input request | [optional] 
+
+### Return type
+
+[**DlpAdvancedAudioDetectionResponse**](DlpAdvancedAudioDetectionResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **detect_document**
 > DlpDetectionResponse detect_document(body=body)

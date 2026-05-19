@@ -1,0 +1,11 @@
+# CustomPiiField
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**title** | **str** | Short title for the custom field, also used to derive the semantic tag (uppercased, spaces/underscores replaced with hyphens). | [optional] 
+**description** | **str** | Description of what this field looks like, used to instruct the redaction LLM. Be specific so the LLM can locate matches. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

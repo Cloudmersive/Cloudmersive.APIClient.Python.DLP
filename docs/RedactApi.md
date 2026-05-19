@@ -4,11 +4,121 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**redact_audio**](RedactApi.md#redact_audio) | **POST** /dlp/redact/audio | Redact User Data in Audio File
+[**redact_audio_advanced**](RedactApi.md#redact_audio_advanced) | **POST** /dlp/redact/audio/advanced | Redact User Data in Audio File (Advanced)
 [**redact_document**](RedactApi.md#redact_document) | **POST** /dlp/redact/document | Redact User Data in Document
 [**redact_document_advanced**](RedactApi.md#redact_document_advanced) | **POST** /dlp/redact/document/advanced | Redact User Data in Document (Advanced)
 [**redact_text**](RedactApi.md#redact_text) | **POST** /dlp/redact/text | Redact User Data in Input Text
 [**redact_text_advanced**](RedactApi.md#redact_text_advanced) | **POST** /dlp/redact/text/advanced | Redact User Data in Input Text (Advanced)
 
+
+# **redact_audio**
+> DlpAudioRedactionResponse redact_audio(body=body)
+
+Redact User Data in Audio File
+
+Transcribes an audio file (WAV, MP3, M4A, FLAC, OGG, WMA), detects 23 configurable types of user data in the transcript, and redacts audio segments containing PII. Returns the redacted audio, redacted transcript, detection results, and redacted segment timestamps.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import cloudmersive_dlp_api_client
+from cloudmersive_dlp_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Apikey
+configuration = cloudmersive_dlp_api_client.Configuration()
+configuration.api_key['Apikey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Apikey'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = cloudmersive_dlp_api_client.RedactApi(cloudmersive_dlp_api_client.ApiClient(configuration))
+body = cloudmersive_dlp_api_client.DlpAudioRedactionRequest() # DlpAudioRedactionRequest | Input request (optional)
+
+try:
+    # Redact User Data in Audio File
+    api_response = api_instance.redact_audio(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling RedactApi->redact_audio: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**DlpAudioRedactionRequest**](DlpAudioRedactionRequest.md)| Input request | [optional] 
+
+### Return type
+
+[**DlpAudioRedactionResponse**](DlpAudioRedactionResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **redact_audio_advanced**
+> DlpAdvancedAudioRedactionResponse redact_audio_advanced(body=body)
+
+Redact User Data in Audio File (Advanced)
+
+Transcribes an audio file (WAV, MP3, M4A, FLAC, OGG, WMA), detects 34 configurable types of user data including health-related PHI in the transcript, and redacts audio segments containing PII. Returns the redacted audio, redacted transcript, detection results, redacted segment timestamps, and optional rationale.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import cloudmersive_dlp_api_client
+from cloudmersive_dlp_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Apikey
+configuration = cloudmersive_dlp_api_client.Configuration()
+configuration.api_key['Apikey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Apikey'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = cloudmersive_dlp_api_client.RedactApi(cloudmersive_dlp_api_client.ApiClient(configuration))
+body = cloudmersive_dlp_api_client.DlpAdvancedAudioRedactionRequest() # DlpAdvancedAudioRedactionRequest | Input request (optional)
+
+try:
+    # Redact User Data in Audio File (Advanced)
+    api_response = api_instance.redact_audio_advanced(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling RedactApi->redact_audio_advanced: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**DlpAdvancedAudioRedactionRequest**](DlpAdvancedAudioRedactionRequest.md)| Input request | [optional] 
+
+### Return type
+
+[**DlpAdvancedAudioRedactionResponse**](DlpAdvancedAudioRedactionResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **redact_document**
 > DlpDocumentRedactionResponse redact_document(body=body)

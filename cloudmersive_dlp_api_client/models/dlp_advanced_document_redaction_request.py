@@ -38,6 +38,7 @@ class DlpAdvancedDocumentRedactionRequest(object):
         'allow_email_address': 'bool',
         'allow_phone_number': 'bool',
         'allow_street_address': 'bool',
+        'allow_city': 'bool',
         'allow_person_name': 'bool',
         'allow_birth_date': 'bool',
         'allow_passport_number': 'bool',
@@ -59,6 +60,8 @@ class DlpAdvancedDocumentRedactionRequest(object):
         'allow_ip_address': 'bool',
         'allow_mac_address': 'bool',
         'allow_health_insurance_member_id': 'bool',
+        'allow_medical_record_number': 'bool',
+        'allow_billing_account_number': 'bool',
         'allow_health_injury_or_disease': 'bool',
         'allow_health_type_of_treatment': 'bool',
         'allow_health_date_and_time_of_treatment': 'bool',
@@ -71,7 +74,8 @@ class DlpAdvancedDocumentRedactionRequest(object):
         'allow_health_universal_record_locator': 'bool',
         'allow_biometrics': 'bool',
         'provide_analysis_rationale': 'bool',
-        'custom_policy_id': 'str'
+        'custom_policy_id': 'str',
+        'custom_fields': 'list[CustomPiiField]'
     }
 
     attribute_map = {
@@ -82,6 +86,7 @@ class DlpAdvancedDocumentRedactionRequest(object):
         'allow_email_address': 'AllowEmailAddress',
         'allow_phone_number': 'AllowPhoneNumber',
         'allow_street_address': 'AllowStreetAddress',
+        'allow_city': 'AllowCity',
         'allow_person_name': 'AllowPersonName',
         'allow_birth_date': 'AllowBirthDate',
         'allow_passport_number': 'AllowPassportNumber',
@@ -103,6 +108,8 @@ class DlpAdvancedDocumentRedactionRequest(object):
         'allow_ip_address': 'AllowIpAddress',
         'allow_mac_address': 'AllowMacAddress',
         'allow_health_insurance_member_id': 'AllowHealthInsuranceMemberID',
+        'allow_medical_record_number': 'AllowMedicalRecordNumber',
+        'allow_billing_account_number': 'AllowBillingAccountNumber',
         'allow_health_injury_or_disease': 'AllowHealthInjuryOrDisease',
         'allow_health_type_of_treatment': 'AllowHealthTypeOfTreatment',
         'allow_health_date_and_time_of_treatment': 'AllowHealthDateAndTimeOfTreatment',
@@ -115,10 +122,11 @@ class DlpAdvancedDocumentRedactionRequest(object):
         'allow_health_universal_record_locator': 'AllowHealthUniversalRecordLocator',
         'allow_biometrics': 'AllowBiometrics',
         'provide_analysis_rationale': 'ProvideAnalysisRationale',
-        'custom_policy_id': 'CustomPolicyID'
+        'custom_policy_id': 'CustomPolicyID',
+        'custom_fields': 'CustomFields'
     }
 
-    def __init__(self, input_file=None, file_name=None, recognition_mode=None, redaction_mode=None, allow_email_address=None, allow_phone_number=None, allow_street_address=None, allow_person_name=None, allow_birth_date=None, allow_passport_number=None, allow_drivers_license=None, allow_social_security_number=None, allow_taxpayer_id=None, allow_credit_card_number=None, allow_credit_card_expiration_date=None, allow_credit_card_verification_code=None, allow_bank_account_number=None, allow_iban=None, allow_health_insurance_number=None, allow_bearer_token=None, allow_http_cookie=None, allow_private_keys=None, allow_credentials=None, allow_deep_web_urls=None, allow_source_code=None, allow_ip_address=None, allow_mac_address=None, allow_health_insurance_member_id=None, allow_health_injury_or_disease=None, allow_health_type_of_treatment=None, allow_health_date_and_time_of_treatment=None, allow_health_plan_beneficiary_number=None, allow_health_payments_made_for_treatment=None, allow_faces=None, allow_vehicle_id=None, allow_device_id=None, allow_names_of_relatives=None, allow_health_universal_record_locator=None, allow_biometrics=None, provide_analysis_rationale=None, custom_policy_id=None):  # noqa: E501
+    def __init__(self, input_file=None, file_name=None, recognition_mode=None, redaction_mode=None, allow_email_address=None, allow_phone_number=None, allow_street_address=None, allow_city=None, allow_person_name=None, allow_birth_date=None, allow_passport_number=None, allow_drivers_license=None, allow_social_security_number=None, allow_taxpayer_id=None, allow_credit_card_number=None, allow_credit_card_expiration_date=None, allow_credit_card_verification_code=None, allow_bank_account_number=None, allow_iban=None, allow_health_insurance_number=None, allow_bearer_token=None, allow_http_cookie=None, allow_private_keys=None, allow_credentials=None, allow_deep_web_urls=None, allow_source_code=None, allow_ip_address=None, allow_mac_address=None, allow_health_insurance_member_id=None, allow_medical_record_number=None, allow_billing_account_number=None, allow_health_injury_or_disease=None, allow_health_type_of_treatment=None, allow_health_date_and_time_of_treatment=None, allow_health_plan_beneficiary_number=None, allow_health_payments_made_for_treatment=None, allow_faces=None, allow_vehicle_id=None, allow_device_id=None, allow_names_of_relatives=None, allow_health_universal_record_locator=None, allow_biometrics=None, provide_analysis_rationale=None, custom_policy_id=None, custom_fields=None):  # noqa: E501
         """DlpAdvancedDocumentRedactionRequest - a model defined in Swagger"""  # noqa: E501
 
         self._input_file = None
@@ -128,6 +136,7 @@ class DlpAdvancedDocumentRedactionRequest(object):
         self._allow_email_address = None
         self._allow_phone_number = None
         self._allow_street_address = None
+        self._allow_city = None
         self._allow_person_name = None
         self._allow_birth_date = None
         self._allow_passport_number = None
@@ -149,6 +158,8 @@ class DlpAdvancedDocumentRedactionRequest(object):
         self._allow_ip_address = None
         self._allow_mac_address = None
         self._allow_health_insurance_member_id = None
+        self._allow_medical_record_number = None
+        self._allow_billing_account_number = None
         self._allow_health_injury_or_disease = None
         self._allow_health_type_of_treatment = None
         self._allow_health_date_and_time_of_treatment = None
@@ -162,6 +173,7 @@ class DlpAdvancedDocumentRedactionRequest(object):
         self._allow_biometrics = None
         self._provide_analysis_rationale = None
         self._custom_policy_id = None
+        self._custom_fields = None
         self.discriminator = None
 
         if input_file is not None:
@@ -178,6 +190,8 @@ class DlpAdvancedDocumentRedactionRequest(object):
             self.allow_phone_number = allow_phone_number
         if allow_street_address is not None:
             self.allow_street_address = allow_street_address
+        if allow_city is not None:
+            self.allow_city = allow_city
         if allow_person_name is not None:
             self.allow_person_name = allow_person_name
         if allow_birth_date is not None:
@@ -220,6 +234,10 @@ class DlpAdvancedDocumentRedactionRequest(object):
             self.allow_mac_address = allow_mac_address
         if allow_health_insurance_member_id is not None:
             self.allow_health_insurance_member_id = allow_health_insurance_member_id
+        if allow_medical_record_number is not None:
+            self.allow_medical_record_number = allow_medical_record_number
+        if allow_billing_account_number is not None:
+            self.allow_billing_account_number = allow_billing_account_number
         if allow_health_injury_or_disease is not None:
             self.allow_health_injury_or_disease = allow_health_injury_or_disease
         if allow_health_type_of_treatment is not None:
@@ -246,6 +264,8 @@ class DlpAdvancedDocumentRedactionRequest(object):
             self.provide_analysis_rationale = provide_analysis_rationale
         if custom_policy_id is not None:
             self.custom_policy_id = custom_policy_id
+        if custom_fields is not None:
+            self.custom_fields = custom_fields
 
     @property
     def input_file(self):
@@ -299,7 +319,7 @@ class DlpAdvancedDocumentRedactionRequest(object):
     def recognition_mode(self):
         """Gets the recognition_mode of this DlpAdvancedDocumentRedactionRequest.  # noqa: E501
 
-        Optional. Recognition mode for image processing. Options: null (default), \"Fast\", \"FastPlus\", \"FastMini\".  # noqa: E501
+        Optional. Recognition mode for image processing. Options: null (default), \"Normal\", \"Advanced\", \"Fast\", \"FastPlus\", \"FastMini\".  # noqa: E501
 
         :return: The recognition_mode of this DlpAdvancedDocumentRedactionRequest.  # noqa: E501
         :rtype: str
@@ -310,7 +330,7 @@ class DlpAdvancedDocumentRedactionRequest(object):
     def recognition_mode(self, recognition_mode):
         """Sets the recognition_mode of this DlpAdvancedDocumentRedactionRequest.
 
-        Optional. Recognition mode for image processing. Options: null (default), \"Fast\", \"FastPlus\", \"FastMini\".  # noqa: E501
+        Optional. Recognition mode for image processing. Options: null (default), \"Normal\", \"Advanced\", \"Fast\", \"FastPlus\", \"FastMini\".  # noqa: E501
 
         :param recognition_mode: The recognition_mode of this DlpAdvancedDocumentRedactionRequest.  # noqa: E501
         :type: str
@@ -409,6 +429,29 @@ class DlpAdvancedDocumentRedactionRequest(object):
         """
 
         self._allow_street_address = allow_street_address
+
+    @property
+    def allow_city(self):
+        """Gets the allow_city of this DlpAdvancedDocumentRedactionRequest.  # noqa: E501
+
+        Set to true to allow standalone city names (e.g. \"San Francisco\") in the document and not redact them. Applies to city names mentioned outside of a full street address.  # noqa: E501
+
+        :return: The allow_city of this DlpAdvancedDocumentRedactionRequest.  # noqa: E501
+        :rtype: bool
+        """
+        return self._allow_city
+
+    @allow_city.setter
+    def allow_city(self, allow_city):
+        """Sets the allow_city of this DlpAdvancedDocumentRedactionRequest.
+
+        Set to true to allow standalone city names (e.g. \"San Francisco\") in the document and not redact them. Applies to city names mentioned outside of a full street address.  # noqa: E501
+
+        :param allow_city: The allow_city of this DlpAdvancedDocumentRedactionRequest.  # noqa: E501
+        :type: bool
+        """
+
+        self._allow_city = allow_city
 
     @property
     def allow_person_name(self):
@@ -894,6 +937,52 @@ class DlpAdvancedDocumentRedactionRequest(object):
         self._allow_health_insurance_member_id = allow_health_insurance_member_id
 
     @property
+    def allow_medical_record_number(self):
+        """Gets the allow_medical_record_number of this DlpAdvancedDocumentRedactionRequest.  # noqa: E501
+
+        Set to true to allow medical record numbers in the document and not redact them.  # noqa: E501
+
+        :return: The allow_medical_record_number of this DlpAdvancedDocumentRedactionRequest.  # noqa: E501
+        :rtype: bool
+        """
+        return self._allow_medical_record_number
+
+    @allow_medical_record_number.setter
+    def allow_medical_record_number(self, allow_medical_record_number):
+        """Sets the allow_medical_record_number of this DlpAdvancedDocumentRedactionRequest.
+
+        Set to true to allow medical record numbers in the document and not redact them.  # noqa: E501
+
+        :param allow_medical_record_number: The allow_medical_record_number of this DlpAdvancedDocumentRedactionRequest.  # noqa: E501
+        :type: bool
+        """
+
+        self._allow_medical_record_number = allow_medical_record_number
+
+    @property
+    def allow_billing_account_number(self):
+        """Gets the allow_billing_account_number of this DlpAdvancedDocumentRedactionRequest.  # noqa: E501
+
+        Set to true to allow billing account numbers (e.g. provider/customer billing account IDs, distinct from bank account numbers) in the document and not redact them.  # noqa: E501
+
+        :return: The allow_billing_account_number of this DlpAdvancedDocumentRedactionRequest.  # noqa: E501
+        :rtype: bool
+        """
+        return self._allow_billing_account_number
+
+    @allow_billing_account_number.setter
+    def allow_billing_account_number(self, allow_billing_account_number):
+        """Sets the allow_billing_account_number of this DlpAdvancedDocumentRedactionRequest.
+
+        Set to true to allow billing account numbers (e.g. provider/customer billing account IDs, distinct from bank account numbers) in the document and not redact them.  # noqa: E501
+
+        :param allow_billing_account_number: The allow_billing_account_number of this DlpAdvancedDocumentRedactionRequest.  # noqa: E501
+        :type: bool
+        """
+
+        self._allow_billing_account_number = allow_billing_account_number
+
+    @property
     def allow_health_injury_or_disease(self):
         """Gets the allow_health_injury_or_disease of this DlpAdvancedDocumentRedactionRequest.  # noqa: E501
 
@@ -1191,6 +1280,29 @@ class DlpAdvancedDocumentRedactionRequest(object):
         """
 
         self._custom_policy_id = custom_policy_id
+
+    @property
+    def custom_fields(self):
+        """Gets the custom_fields of this DlpAdvancedDocumentRedactionRequest.  # noqa: E501
+
+        Optional list of caller-defined custom PII fields to detect and redact in addition  to the built-in categories. Each entry has a Title (used to derive the redaction  tag, e.g. \"internal participant code\" → [INTERNAL-PARTICIPANT-CODE]) and a  Description telling the redaction LLM what the field looks like. Default null.  # noqa: E501
+
+        :return: The custom_fields of this DlpAdvancedDocumentRedactionRequest.  # noqa: E501
+        :rtype: list[CustomPiiField]
+        """
+        return self._custom_fields
+
+    @custom_fields.setter
+    def custom_fields(self, custom_fields):
+        """Sets the custom_fields of this DlpAdvancedDocumentRedactionRequest.
+
+        Optional list of caller-defined custom PII fields to detect and redact in addition  to the built-in categories. Each entry has a Title (used to derive the redaction  tag, e.g. \"internal participant code\" → [INTERNAL-PARTICIPANT-CODE]) and a  Description telling the redaction LLM what the field looks like. Default null.  # noqa: E501
+
+        :param custom_fields: The custom_fields of this DlpAdvancedDocumentRedactionRequest.  # noqa: E501
+        :type: list[CustomPiiField]
+        """
+
+        self._custom_fields = custom_fields
 
     def to_dict(self):
         """Returns the model properties as a dict"""

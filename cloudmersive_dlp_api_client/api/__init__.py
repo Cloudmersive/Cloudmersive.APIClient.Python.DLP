@@ -5,3 +5,4 @@ from __future__ import absolute_import
 # import apis into api package
 from cloudmersive_dlp_api_client.api.detect_api import DetectApi
 from cloudmersive_dlp_api_client.api.redact_api import RedactApi
+from cloudmersive_dlp_api_client.api.tasks_batch_job_api import TasksBatchJobApi

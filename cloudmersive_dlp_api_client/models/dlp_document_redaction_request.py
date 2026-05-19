@@ -229,7 +229,7 @@ class DlpDocumentRedactionRequest(object):
     def recognition_mode(self):
         """Gets the recognition_mode of this DlpDocumentRedactionRequest.  # noqa: E501
 
-        Optional. Recognition mode for image processing. Options: null (default), \"Fast\", \"FastPlus\", \"FastMini\".  # noqa: E501
+        Optional. Recognition mode for image processing. Options: null (default), \"Normal\", \"Advanced\", \"Fast\", \"FastPlus\", \"FastMini\".  # noqa: E501
 
         :return: The recognition_mode of this DlpDocumentRedactionRequest.  # noqa: E501
         :rtype: str
@@ -240,7 +240,7 @@ class DlpDocumentRedactionRequest(object):
     def recognition_mode(self, recognition_mode):
         """Sets the recognition_mode of this DlpDocumentRedactionRequest.
 
-        Optional. Recognition mode for image processing. Options: null (default), \"Fast\", \"FastPlus\", \"FastMini\".  # noqa: E501
+        Optional. Recognition mode for image processing. Options: null (default), \"Normal\", \"Advanced\", \"Fast\", \"FastPlus\", \"FastMini\".  # noqa: E501
 
         :param recognition_mode: The recognition_mode of this DlpDocumentRedactionRequest.  # noqa: E501
         :type: str

@@ -723,7 +723,7 @@ class DlpRedactionRequest(object):
     def redaction_mode(self):
         """Gets the redaction_mode of this DlpRedactionRequest.  # noqa: E501
 
-        Redaction mode: \"Delete\" to remove PII entirely, or \"ReplaceWithAsterisk\" to replace PII characters with asterisks (*).  # noqa: E501
+        Redaction mode: \"SemanticTag\" (default) replaces PII with a semantic tag in square brackets (e.g. [PHONE-NUMBER]), \"Delete\" removes PII entirely, or \"ReplaceWithAsterisk\" replaces PII characters with asterisks (*).  # noqa: E501
 
         :return: The redaction_mode of this DlpRedactionRequest.  # noqa: E501
         :rtype: str
@@ -734,7 +734,7 @@ class DlpRedactionRequest(object):
     def redaction_mode(self, redaction_mode):
         """Sets the redaction_mode of this DlpRedactionRequest.
 
-        Redaction mode: \"Delete\" to remove PII entirely, or \"ReplaceWithAsterisk\" to replace PII characters with asterisks (*).  # noqa: E501
+        Redaction mode: \"SemanticTag\" (default) replaces PII with a semantic tag in square brackets (e.g. [PHONE-NUMBER]), \"Delete\" removes PII entirely, or \"ReplaceWithAsterisk\" replaces PII characters with asterisks (*).  # noqa: E501
 
         :param redaction_mode: The redaction_mode of this DlpRedactionRequest.  # noqa: E501
         :type: str

@@ -35,6 +35,7 @@ class DlpAdvancedDetectionResponse(object):
         'contains_email_address': 'bool',
         'contains_phone_number': 'bool',
         'contains_street_address': 'bool',
+        'contains_city': 'bool',
         'contains_person_name': 'bool',
         'contains_birth_date': 'bool',
         'contains_passport_number': 'bool',
@@ -56,6 +57,8 @@ class DlpAdvancedDetectionResponse(object):
         'contains_ip_address': 'bool',
         'contains_mac_address': 'bool',
         'contains_health_insurance_member_id': 'bool',
+        'contains_medical_record_number': 'bool',
+        'contains_billing_account_number': 'bool',
         'contains_health_injury_or_disease': 'bool',
         'contains_health_type_of_treatment': 'bool',
         'contains_health_date_and_time_of_treatment': 'bool',
@@ -75,6 +78,7 @@ class DlpAdvancedDetectionResponse(object):
         'contains_email_address': 'ContainsEmailAddress',
         'contains_phone_number': 'ContainsPhoneNumber',
         'contains_street_address': 'ContainsStreetAddress',
+        'contains_city': 'ContainsCity',
         'contains_person_name': 'ContainsPersonName',
         'contains_birth_date': 'ContainsBirthDate',
         'contains_passport_number': 'ContainsPassportNumber',
@@ -96,6 +100,8 @@ class DlpAdvancedDetectionResponse(object):
         'contains_ip_address': 'ContainsIpAddress',
         'contains_mac_address': 'ContainsMacAddress',
         'contains_health_insurance_member_id': 'ContainsHealthInsuranceMemberID',
+        'contains_medical_record_number': 'ContainsMedicalRecordNumber',
+        'contains_billing_account_number': 'ContainsBillingAccountNumber',
         'contains_health_injury_or_disease': 'ContainsHealthInjuryOrDisease',
         'contains_health_type_of_treatment': 'ContainsHealthTypeOfTreatment',
         'contains_health_date_and_time_of_treatment': 'ContainsHealthDateAndTimeOfTreatment',
@@ -110,13 +116,14 @@ class DlpAdvancedDetectionResponse(object):
         'analysis_rationale': 'AnalysisRationale'
     }
 
-    def __init__(self, clean_result=None, contains_email_address=None, contains_phone_number=None, contains_street_address=None, contains_person_name=None, contains_birth_date=None, contains_passport_number=None, contains_drivers_license=None, contains_social_security_number=None, contains_taxpayer_id=None, contains_credit_card_number=None, contains_credit_card_expiration_date=None, contains_credit_card_verification_code=None, contains_bank_account_number=None, contains_iban=None, contains_health_insurance_number=None, contains_bearer_token=None, contains_http_cookie=None, contains_private_keys=None, contains_credentials=None, contains_deep_web_urls=None, contains_source_code=None, contains_ip_address=None, contains_mac_address=None, contains_health_insurance_member_id=None, contains_health_injury_or_disease=None, contains_health_type_of_treatment=None, contains_health_date_and_time_of_treatment=None, contains_health_plan_beneficiary_number=None, contains_health_payments_made_for_treatment=None, contains_faces=None, contains_vehicle_id=None, contains_device_id=None, contains_names_of_relatives=None, contains_health_universal_record_locator=None, contains_biometrics=None, analysis_rationale=None):  # noqa: E501
+    def __init__(self, clean_result=None, contains_email_address=None, contains_phone_number=None, contains_street_address=None, contains_city=None, contains_person_name=None, contains_birth_date=None, contains_passport_number=None, contains_drivers_license=None, contains_social_security_number=None, contains_taxpayer_id=None, contains_credit_card_number=None, contains_credit_card_expiration_date=None, contains_credit_card_verification_code=None, contains_bank_account_number=None, contains_iban=None, contains_health_insurance_number=None, contains_bearer_token=None, contains_http_cookie=None, contains_private_keys=None, contains_credentials=None, contains_deep_web_urls=None, contains_source_code=None, contains_ip_address=None, contains_mac_address=None, contains_health_insurance_member_id=None, contains_medical_record_number=None, contains_billing_account_number=None, contains_health_injury_or_disease=None, contains_health_type_of_treatment=None, contains_health_date_and_time_of_treatment=None, contains_health_plan_beneficiary_number=None, contains_health_payments_made_for_treatment=None, contains_faces=None, contains_vehicle_id=None, contains_device_id=None, contains_names_of_relatives=None, contains_health_universal_record_locator=None, contains_biometrics=None, analysis_rationale=None):  # noqa: E501
         """DlpAdvancedDetectionResponse - a model defined in Swagger"""  # noqa: E501
 
         self._clean_result = None
         self._contains_email_address = None
         self._contains_phone_number = None
         self._contains_street_address = None
+        self._contains_city = None
         self._contains_person_name = None
         self._contains_birth_date = None
         self._contains_passport_number = None
@@ -138,6 +145,8 @@ class DlpAdvancedDetectionResponse(object):
         self._contains_ip_address = None
         self._contains_mac_address = None
         self._contains_health_insurance_member_id = None
+        self._contains_medical_record_number = None
+        self._contains_billing_account_number = None
         self._contains_health_injury_or_disease = None
         self._contains_health_type_of_treatment = None
         self._contains_health_date_and_time_of_treatment = None
@@ -160,6 +169,8 @@ class DlpAdvancedDetectionResponse(object):
             self.contains_phone_number = contains_phone_number
         if contains_street_address is not None:
             self.contains_street_address = contains_street_address
+        if contains_city is not None:
+            self.contains_city = contains_city
         if contains_person_name is not None:
             self.contains_person_name = contains_person_name
         if contains_birth_date is not None:
@@ -202,6 +213,10 @@ class DlpAdvancedDetectionResponse(object):
             self.contains_mac_address = contains_mac_address
         if contains_health_insurance_member_id is not None:
             self.contains_health_insurance_member_id = contains_health_insurance_member_id
+        if contains_medical_record_number is not None:
+            self.contains_medical_record_number = contains_medical_record_number
+        if contains_billing_account_number is not None:
+            self.contains_billing_account_number = contains_billing_account_number
         if contains_health_injury_or_disease is not None:
             self.contains_health_injury_or_disease = contains_health_injury_or_disease
         if contains_health_type_of_treatment is not None:
@@ -318,6 +333,29 @@ class DlpAdvancedDetectionResponse(object):
         """
 
         self._contains_street_address = contains_street_address
+
+    @property
+    def contains_city(self):
+        """Gets the contains_city of this DlpAdvancedDetectionResponse.  # noqa: E501
+
+        True if the input text contains standalone city names (e.g. \"San Francisco\") outside of a full street address.  # noqa: E501
+
+        :return: The contains_city of this DlpAdvancedDetectionResponse.  # noqa: E501
+        :rtype: bool
+        """
+        return self._contains_city
+
+    @contains_city.setter
+    def contains_city(self, contains_city):
+        """Sets the contains_city of this DlpAdvancedDetectionResponse.
+
+        True if the input text contains standalone city names (e.g. \"San Francisco\") outside of a full street address.  # noqa: E501
+
+        :param contains_city: The contains_city of this DlpAdvancedDetectionResponse.  # noqa: E501
+        :type: bool
+        """
+
+        self._contains_city = contains_city
 
     @property
     def contains_person_name(self):
@@ -801,6 +839,52 @@ class DlpAdvancedDetectionResponse(object):
         """
 
         self._contains_health_insurance_member_id = contains_health_insurance_member_id
+
+    @property
+    def contains_medical_record_number(self):
+        """Gets the contains_medical_record_number of this DlpAdvancedDetectionResponse.  # noqa: E501
+
+        True if the input text contains medical record numbers.  # noqa: E501
+
+        :return: The contains_medical_record_number of this DlpAdvancedDetectionResponse.  # noqa: E501
+        :rtype: bool
+        """
+        return self._contains_medical_record_number
+
+    @contains_medical_record_number.setter
+    def contains_medical_record_number(self, contains_medical_record_number):
+        """Sets the contains_medical_record_number of this DlpAdvancedDetectionResponse.
+
+        True if the input text contains medical record numbers.  # noqa: E501
+
+        :param contains_medical_record_number: The contains_medical_record_number of this DlpAdvancedDetectionResponse.  # noqa: E501
+        :type: bool
+        """
+
+        self._contains_medical_record_number = contains_medical_record_number
+
+    @property
+    def contains_billing_account_number(self):
+        """Gets the contains_billing_account_number of this DlpAdvancedDetectionResponse.  # noqa: E501
+
+        True if the input text contains billing account numbers (provider/customer billing account IDs, distinct from bank account numbers).  # noqa: E501
+
+        :return: The contains_billing_account_number of this DlpAdvancedDetectionResponse.  # noqa: E501
+        :rtype: bool
+        """
+        return self._contains_billing_account_number
+
+    @contains_billing_account_number.setter
+    def contains_billing_account_number(self, contains_billing_account_number):
+        """Sets the contains_billing_account_number of this DlpAdvancedDetectionResponse.
+
+        True if the input text contains billing account numbers (provider/customer billing account IDs, distinct from bank account numbers).  # noqa: E501
+
+        :param contains_billing_account_number: The contains_billing_account_number of this DlpAdvancedDetectionResponse.  # noqa: E501
+        :type: bool
+        """
+
+        self._contains_billing_account_number = contains_billing_account_number
 
     @property
     def contains_health_injury_or_disease(self):

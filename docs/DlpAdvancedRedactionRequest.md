@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **allow_email_address** | **bool** | Set to true to allow email addresses in the input text and not redact them. | [optional] 
 **allow_phone_number** | **bool** | Set to true to allow phone numbers in the input text and not redact them. | [optional] 
 **allow_street_address** | **bool** | Set to true to allow street addresses in the input text and not redact them. | [optional] 
+**allow_city** | **bool** | Set to true to allow standalone city names (e.g. \&quot;San Francisco\&quot;) in the input text and not redact them. Applies to city names mentioned outside of a full street address. | [optional] 
 **allow_person_name** | **bool** | Set to true to allow person names in the input text and not redact them. | [optional] 
 **allow_birth_date** | **bool** | Set to true to allow birth dates in the input text and not redact them. | [optional] 
 **allow_passport_number** | **bool** | Set to true to allow passport numbers in the input text and not redact them. | [optional] 
@@ -28,6 +29,8 @@ Name | Type | Description | Notes
 **allow_ip_address** | **bool** | Set to true to allow IP addresses in the input text and not redact them. | [optional] 
 **allow_mac_address** | **bool** | Set to true to allow MAC addresses in the input text and not redact them. | [optional] 
 **allow_health_insurance_member_id** | **bool** | Set to true to allow health insurance member IDs in the input text and not redact them. | [optional] 
+**allow_medical_record_number** | **bool** | Set to true to allow medical record numbers in the input text and not redact them. | [optional] 
+**allow_billing_account_number** | **bool** | Set to true to allow billing account numbers (e.g. provider/customer billing account IDs, distinct from bank account numbers) in the input text and not redact them. | [optional] 
 **allow_health_injury_or_disease** | **bool** | Set to true to allow references to injuries or diseases in the input text and not redact them. | [optional] 
 **allow_health_type_of_treatment** | **bool** | Set to true to allow references to types of medical treatment in the input text and not redact them. | [optional] 
 **allow_health_date_and_time_of_treatment** | **bool** | Set to true to allow dates and times of medical treatment in the input text and not redact them. | [optional] 
@@ -38,9 +41,10 @@ Name | Type | Description | Notes
 **allow_names_of_relatives** | **bool** | Set to true to allow names of relatives in the input text and not redact them. | [optional] 
 **allow_health_universal_record_locator** | **bool** | Set to true to allow health universal record locators (URLs) in the input text and not redact them. | [optional] 
 **allow_biometrics** | **bool** | Set to true to allow biometric data references (e.g. fingerprints, retinal scans, voiceprints) in the input text and not redact them. | [optional] 
-**redaction_mode** | **str** | Redaction mode: \&quot;Delete\&quot; to remove PII entirely, or \&quot;ReplaceWithAsterisk\&quot; to replace PII characters with asterisks (*). | [optional] 
+**redaction_mode** | **str** | Redaction mode: \&quot;SemanticTag\&quot; (default) replaces PII with a semantic tag in square brackets (e.g. [PHONE-NUMBER]), \&quot;Delete\&quot; removes PII entirely, or \&quot;ReplaceWithAsterisk\&quot; replaces PII characters with asterisks (*). | [optional] 
 **provide_analysis_rationale** | **bool** | Set to true to include a natural language rationale explaining why each detection conclusion was formed. | [optional] 
 **custom_policy_id** | **str** | Apply a Custom Policy for DLP Enforcement by providing the ID; to create a Custom Policy,  navigate to the Cloudmersive Management Portal and select Custom Policies.  Requires Managed Instance or Private Cloud | [optional] 
+**custom_fields** | [**list[CustomPiiField]**](CustomPiiField.md) | Optional list of caller-defined custom PII fields to detect and redact in addition  to the built-in categories. Each entry has a Title (used to derive the redaction  tag, e.g. \&quot;internal participant code\&quot; → [INTERNAL-PARTICIPANT-CODE]) and a  Description telling the redaction LLM what the field looks like. Default null. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

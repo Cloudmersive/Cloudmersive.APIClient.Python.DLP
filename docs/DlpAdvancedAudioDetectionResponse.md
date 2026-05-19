@@ -1,0 +1,50 @@
+# DlpAdvancedAudioDetectionResponse
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**clean_result** | **bool** | True if no disallowed PII or sensitive data types were detected; false if any disallowed type was found. | [optional] 
+**transcript** | **str** | Full transcript of the audio file. | [optional] 
+**timestamps** | [**list[AudioTimestamp]**](AudioTimestamp.md) | Token-level timestamps from speech recognition. | [optional] 
+**contains_email_address** | **bool** | True if the audio transcript contains email addresses. | [optional] 
+**contains_phone_number** | **bool** | True if the audio transcript contains phone numbers. | [optional] 
+**contains_street_address** | **bool** | True if the audio transcript contains street addresses. | [optional] 
+**contains_city** | **bool** | True if the audio transcript contains standalone city names (e.g. \&quot;San Francisco\&quot;) outside of a full street address. | [optional] 
+**contains_person_name** | **bool** | True if the audio transcript contains person names. | [optional] 
+**contains_birth_date** | **bool** | True if the audio transcript contains birth dates. | [optional] 
+**contains_passport_number** | **bool** | True if the audio transcript contains passport numbers. | [optional] 
+**contains_drivers_license** | **bool** | True if the audio transcript contains drivers license numbers. | [optional] 
+**contains_social_security_number** | **bool** | True if the audio transcript contains social security numbers. | [optional] 
+**contains_taxpayer_id** | **bool** | True if the audio transcript contains taxpayer IDs. | [optional] 
+**contains_credit_card_number** | **bool** | True if the audio transcript contains credit card numbers. | [optional] 
+**contains_credit_card_expiration_date** | **bool** | True if the audio transcript contains credit card expiration dates. | [optional] 
+**contains_credit_card_verification_code** | **bool** | True if the audio transcript contains credit card verification codes. | [optional] 
+**contains_bank_account_number** | **bool** | True if the audio transcript contains bank account numbers. | [optional] 
+**contains_iban** | **bool** | True if the audio transcript contains IBANs. | [optional] 
+**contains_health_insurance_number** | **bool** | True if the audio transcript contains health insurance numbers. | [optional] 
+**contains_bearer_token** | **bool** | True if the audio transcript contains bearer tokens. | [optional] 
+**contains_http_cookie** | **bool** | True if the audio transcript contains HTTP cookies. | [optional] 
+**contains_private_keys** | **bool** | True if the audio transcript contains private keys. | [optional] 
+**contains_credentials** | **bool** | True if the audio transcript contains credentials (usernames/passwords). | [optional] 
+**contains_deep_web_urls** | **bool** | True if the audio transcript contains deep web URLs (.onion). | [optional] 
+**contains_source_code** | **bool** | True if the audio transcript contains source code. | [optional] 
+**contains_ip_address** | **bool** | True if the audio transcript contains IP addresses. | [optional] 
+**contains_mac_address** | **bool** | True if the audio transcript contains MAC addresses. | [optional] 
+**contains_health_insurance_member_id** | **bool** | True if the audio transcript contains health insurance member IDs. | [optional] 
+**contains_medical_record_number** | **bool** | True if the audio transcript contains medical record numbers. | [optional] 
+**contains_billing_account_number** | **bool** | True if the audio transcript contains billing account numbers (provider/customer billing account IDs, distinct from bank account numbers). | [optional] 
+**contains_health_injury_or_disease** | **bool** | True if the audio transcript contains references to injuries or diseases. | [optional] 
+**contains_health_type_of_treatment** | **bool** | True if the audio transcript contains references to types of medical treatment. | [optional] 
+**contains_health_date_and_time_of_treatment** | **bool** | True if the audio transcript contains dates and times of medical treatment. | [optional] 
+**contains_health_plan_beneficiary_number** | **bool** | True if the audio transcript contains health plan beneficiary numbers. | [optional] 
+**contains_health_payments_made_for_treatment** | **bool** | True if the audio transcript contains payments made for medical treatment. | [optional] 
+**contains_vehicle_id** | **bool** | True if the audio transcript contains vehicle identifiers (e.g. license plates, VINs). | [optional] 
+**contains_device_id** | **bool** | True if the audio transcript contains device identifiers (e.g. serial numbers, IMEIs, MAC-level device IDs). | [optional] 
+**contains_names_of_relatives** | **bool** | True if the audio transcript contains names of relatives. | [optional] 
+**contains_health_universal_record_locator** | **bool** | True if the audio transcript contains health universal record locators (URLs). | [optional] 
+**contains_biometrics** | **bool** | True if the audio transcript contains biometric data references (e.g. fingerprints, retinal scans, voiceprints). | [optional] 
+**analysis_rationale** | **str** | Rationale for why the conclusion was formed. Only populated when ProvideAnalysisRationale is set to true in the request. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
